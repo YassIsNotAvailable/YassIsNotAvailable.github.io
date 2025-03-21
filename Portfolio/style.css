@@ -1,0 +1,412 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap%27);
+
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Popins',sans-serif;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 3rem;
+    color: coral;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+    justify-content: center;
+    position: relative;
+}
+
+.logo:hover {
+    transform: scale(1,1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: coral;
+}
+nav a.active {
+    color: coral;
+    border-bottom: 3px solid coral;
+}
+
+.social-icon a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid coral;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: wheat;
+}
+
+.social-icon a:hover {
+    color: black;
+    background-color: coral;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px coral;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border: 0.2rem solid coral;
+    border-radius: 4rem;
+    color: wheat;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    color: black;
+    background-color: coral;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px coral; 
+}
+
+@media(max-width:995px){
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40px;
+        border-left: 3px solid coral;
+        border-bottom: 3px solid coral;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover, nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid coral;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    margin-top: -100px;
+}
+
+.home .home-content2 {
+    border: 10px solid coral;
+    padding: 100px;
+    margin: 100px;
+    border-radius: 10%;
+    transition: 0.5s ease;
+    box-shadow: 0 10px 50px coral;
+    background-color: black;
+}
+
+
+.home,
+.home2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content2 h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+span  {
+    color: coral;
+}
+
+.home-content h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.25rem;
+}
+
+.PA-img {
+    border-radius: 50%;
+}
+
+.PA-img img {
+    width: 50vh;
+    border-radius: 20%;
+    box-shadow: 0 0 25px coral;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin: 0 10px;
+}
+
+.PA-IMG img {
+    position: relative;
+    width: 40vh;
+    border-radius: 20%;
+    box-shadow: 0 0 25px solid coral;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin: 10px;
+}
+
+.PA-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.SP-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.SP-img img {
+    width: 40vh;
+    border-radius: 20%;
+    box-shadow: 0 0 25px coral;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin: 0 10px;
+}
+
+.SP-img img:hover {
+    transform: scale(1.05);
+}
+
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "étudiant";
+    color: coral;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid;
+    }
+}
+
+@keyframes words {
+    0%, 25% {
+        content: "étudiant";
+        text-decoration: none;
+    }
+    26%, 50% {
+        content: "informaticien";
+        text-decoration: none;
+    }
+    51%, 75% {
+        content: "ingénieur";
+        text-decoration: line-through;
+    }
+    76%, 100% {
+        content: "futur ingénieur";
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+    
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .PA-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+h4, li {
+    font-size: 2rem;
+}
+
+.redclass {
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.spe {
+    text-decoration: underline;
+}
+
+.about-me-page .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 100px); 
+}
+
+.about-me-page .home-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 20px; 
+    padding-top: 100px;
+}
+
+.about-me-page .SP-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.about-me-page .SP-img img {
+    width: 40vh; 
+    border-radius: 20%;
+    box-shadow: 0 0 25px coral;
+    cursor: pointer;
+    transition: 0.2s linear;
+    margin: 0 10px;
+}
+
+.about-me-page .SP-img img:hover {
+    transform: scale(1.05);
+}
+
+.about-me-page h3 {
+    font-size: 2rem; 
+}
+
+@media (max-width: 768px) {
+    .about-me-page .home-content {
+        padding-right: 0;
+    }
+    
+    .about-me-page .SP-img img {
+        width: 35vh; 
+    }
+}
+
+.skills-page .home {
+    background-image: url('BA.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 20px; 
+}
+
+
+.slide-out {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease; 
+}
+
+.slide-in {
+    transform: translateX(0); 
+}
+
+body {
+    position: relative;
+}
+
+.about-me-page .home {
+    background-image: url('BA.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 20px; 
+}

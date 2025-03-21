@@ -1,0 +1,385 @@
+/* Import de la police Roboto depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 2;
+    background-color: #121212; 
+    color: bisque; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900 !important;
+    color: #fff; 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    color: whitesmoke !important;
+}
+
+.bigtitle, .smalltitle, .btn-title {
+    text-shadow: 2px 2px 3px black;
+}
+
+.navbar {
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.25);
+    background-color: #212121; 
+}
+
+.oldsite {
+    color: rgb(91, 223, 252) !important;
+}
+
+.oldsite:hover {
+    color: rgb(24, 146, 253) !important;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+    background: -webkit-linear-gradient(#00e0fe, #0f07fe);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.oldsite:hover {
+    color: rgb(224, 123, 0);
+}
+
+section {
+    margin-bottom: 130px;
+}
+
+.head {
+    background-image: url(./image/python.jpg);
+    padding: 180px 0;
+    z-index: 2;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; 
+}
+
+.nav-link:hover {
+    color: bisque !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#00e0fe, #0f07fe);
+    opacity: 40%;
+    z-index: -1;
+}
+
+.bg-cover {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 14px 22px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-main {
+    background: whitesmoke;
+    border-radius: 100px;
+    text-shadow: none;
+    border: none;
+    font-weight: 600;
+    color: black !important;
+}
+
+.btn-main2 {
+    background: linear-gradient(to right, #00e0fe, #0f07fe);
+    color: whitesmoke;
+    border-radius: 100px;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-main::before {
+    content: "Désactiver le mode sombre";
+}
+
+.school-intro {
+    margin-bottom: 40px;
+    color: #fff; 
+}
+
+.school-intro .divider {
+    height: 4px;
+    background: linear-gradient(to right, #00e0fe, #0f07fe);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 16px auto 100px auto;
+}
+
+.school-sr, .school-imt {
+    padding-top: 35px;
+    transition: all 0.3s ease;
+    color: #fff; 
+}
+
+
+.school-sr:hover, .school-imt:hover {
+    background-color: #333; 
+    padding: 10px;
+    transform: scale(1.1);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.5);
+}
+
+.school-sr h5, .school-imt h5 {
+    padding-top: 15px;
+    color: #fff; 
+    text-align: center;
+}
+
+.school-sr h5 {
+    padding-top: 50px;
+}
+
+.project-section {
+    padding-top: 200px;
+    min-height: 60vh;
+    height: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./image/ville.jpg);
+}
+
+.skills {
+    color: white;
+}
+
+.icon {
+    color: #00e0fe;
+    height: 40px;
+    padding-bottom: 50px;
+}
+
+.softskill {
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.row {
+    padding-bottom: 50px;
+}
+
+.col-md-4 {
+    transition: all 0.3s ease;
+}
+
+.col-md-4:hover {
+    transform: scale(1.1);
+}
+
+.detail {
+    font-weight: 600;
+    font-size: 20px;
+    height: 4px;
+    background: linear-gradient(to right,#00e0fe, #0f07fe);
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 16px auto 100px auto ;
+}
+
+.about-section {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-intro {
+    margin: 80px 0 0 0;
+}
+
+.about-intro .divider {
+    height: 4px;
+    background: linear-gradient(to right,#00e0fe, #0f07fe);
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 16px auto 40px auto ;
+}
+
+
+.carousel-item .col-md-4 {
+    height: 300px; 
+    overflow: hidden;
+    margin: 50px 0 10px 0;
+}
+.carousel-item .col-md-4 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+  
+/*Centrage des images dans la carousel*/
+.carousel-item .col-md-8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+  
+.custom-carousel .carousel-control-prev, .custom-carousel .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px; 
+    height: 40px; 
+    background-color: rgba(31, 163, 251, 0.5);
+    border-radius: 50%; 
+    opacity: 1;
+}
+
+.custom-carousel .carousel-control-prev {
+    left: -50px; 
+}
+  .custom-carousel .carousel-control-next {
+    right: -50px;
+}
+  
+.custom-carousel .carousel-control-prev-icon, .custom-carousel .carousel-control-next-icon {
+    width: 20px; 
+    height: 20px; 
+}
+
+.adjustement {
+    margin-top: 80px;
+}
+
+.contact-section {
+    padding: 60px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./image/contact.jpg);
+}
+
+form .form-control {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+form .form-control:focus {
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
+    border-color: black;
+}
+
+form input.form-control {
+    height: 54px;
+}
+
+form .form-control::placeholder {
+    color: white;
+}
+
+.phone {
+    margin: 0;
+}
+
+.contact-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer {
+    margin-top: 0;
+    padding: 30px 0 0 0;
+    bottom: -100px;
+}
+
+.fa-linkedin {
+    color: bisque;
+}
+
+.container .foot {
+    margin: 0;
+    height: 0;
+}
+
+/* Change les quelques défauts rencontrés en mode téléphone */
+
+@media (max-width: 767px) {
+
+    .about-intro {
+        margin: 200px 0 0 0;
+    }
+
+    .custom-carousel {
+        box-shadow: none;
+    }
+
+    .custom-carousel .carousel-control-prev,
+    .custom-carousel .carousel-control-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: rgba(31, 163, 251, 0.5);
+      border-radius: 50%;
+    }
+  
+    .custom-carousel .carousel-control-prev {
+      left: 10px;
+    }
+  
+    .custom-carousel .carousel-control-next {
+      right: 10px;
+    }
+  
+    .custom-carousel .carousel-control-prev-icon,
+    .custom-carousel .carousel-control-next-icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .carousel-item .container .row {
+        margin-top: -100px;
+    }
+}
