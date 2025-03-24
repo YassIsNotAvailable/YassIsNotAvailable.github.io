@@ -153,6 +153,9 @@ section {
     color: #fff; 
 }
 
+.school-sr{
+    margin-top: 42px;
+}
 
 .school-sr:hover, .school-imt:hover {
     background-color: #333; 
