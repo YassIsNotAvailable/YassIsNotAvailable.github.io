@@ -618,7 +618,11 @@ footer {
       /* Réduit la taille de la description */
     }
 
-    .robot-3d, .info-3d {
+    .robot-3d {
+      display: none;
+    }
+
+    .info-3d {
       display: none;
     }
   
