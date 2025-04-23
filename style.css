@@ -1,0 +1,901 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+    cursor: url('images/cursor.png'), default;
+    position: relative;
+}
+
+.image-gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 200px;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.logo {
+    color: white;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: #5300a0;
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-left: -5%;
+}
+
+.old {
+    z-index: 999;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.4s ease;
+    cursor: url('images/cursor-click.png'), default;
+    background-image: linear-gradient(30deg,rgb(133,133,133),rgb(255,255,255));
+    color: #000000;
+}
+
+.old:hover {
+    color: #ffffff;
+    background-image: linear-gradient(-150deg,rgb(72, 11, 179),rgb(135, 124, 151));
+    box-shadow: 0 0 20px #5300a0;
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    color: inherit;
+    z-index: 999;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.4s ease;
+    cursor: url('images/cursor-click.png'), default;
+    color: #ffffff;
+}
+
+.nav-link:hover{
+    color: #5300a0;
+    cursor: url('images/cursor-click.png'), default;
+    transform: scale(1.05);
+    background-color: #5300a0 !important;
+    box-shadow: 0 0 20px #5300a0;
+    color: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+
+.auto-type {
+    color: #5300a0;
+}
+
+.btn-signing {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 999;
+    background-color: #8652cf;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: url('images/cursor-click.png'), default;
+    transition: color 0.3s ease;
+}
+
+.btn-signing:hover {
+    background-color: #3f018a;
+    color: rgb(0, 0, 0) !important;
+    transform: scale(1.05);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content {
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes animationGradient {
+    to {
+        background-position: 200%;
+    }
+} 
+
+.tag-box .tag {
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: url('images/cursor-click.png'), default;
+}
+
+.tag-box .tag:hover {
+    color: #5300a0;
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+
+.description {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: gray;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.btn-get-started {
+    text-decoration: none;
+    border: 1px solid #2a2a2a;
+    padding: 0.7rem 1.2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.4s ease;
+    cursor: url('images/cursor-click.png'), default;
+    color: #5300a0;
+}
+
+.btn-get-started:hover{
+    background-color: #5300a0 !important;
+    box-shadow: 0 0 20px #5300a0;
+    color: white;
+    transform: scale(1.05);
+}
+
+.robot-3d {
+    position: absolute;
+    top: -40%;
+    right: -20%;
+}
+
+.space {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+.about-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    margin-bottom: 5rem;
+}
+
+.about-title {
+    margin-bottom: 5%;
+    font-size: 5rem;
+    background-image: linear-gradient(rgb(111, 111, 111),rgb(255,255,255));
+    color: transparent;
+    background-clip: text;
+    transition: 0.4s ease;
+}
+
+.bento-grid {
+    display: grid;
+    position: relative;
+    height: 90vh;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "intro intro tech"
+    "time time tech"
+    "passion1 passion2 passion3"
+    ;
+    gap: 1.5rem;
+}
+
+.card {
+    background: linear-gradient(145deg, rgba(0,0,0,0.14),rgba(0,0,0,0.07));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px black;
+}
+
+.intro { grid-area: intro; min-height: 460px; }
+.tech { grid-area: tech; min-height: 450px; }
+.time { grid-area: time; min-height: 620px; }
+.passion1 { grid-area: passion1; min-height: 450px; }
+.passion2 { grid-area: passion2; min-height: 450px; }
+.passion3 { grid-area: passion3; min-height: 450px; }
+
+.passion1, .passion2, .passion3 {
+    align-items: center;
+    text-align: center;   
+}
+
+.passion1 h3, .passion2 h3, .passion3 h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(rgb(160, 109, 222),rgb(255,255,255));
+    color: transparent;
+    background-clip: text;
+}
+
+.passion1 p, .passion2 p, .passion3 p {
+    font-size: 1.1rem;
+    color: #c6c4c4;
+    margin-top: 0.5rem;
+}
+
+.card:hover {
+    border-color: transparent;
+    box-shadow: 0 10px 30px rgba(63, 63, 63, 0.5);
+    transform: translateY(-5px);
+}
+
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 0;
+    background: radial-gradient(circle at var(--x) var(--y), rgba(108, 16, 236, 0.3), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-left: 1rem;   
+    color: #ffffff;
+}
+
+.tech h5 {
+    font-size: 1.4rem;
+}
+
+.tech i {
+    scale: 2;
+    margin: 20px;
+}
+
+.card-text {
+    max-width: 30rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+    color: #7b7b7b;
+}
+
+.bento-grid .background-img {
+    position: absolute;
+    inset: -1% -1% -1% -1%;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.model-box {
+    position: absolute;
+    scale: 0.7;
+    top: -30%;
+    left: 25%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-3d {
+    width: 150%;
+    height: 150%;
+    mix-blend-mode: lighten;
+}
+
+.bento-grid .skill-group {
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    width: 70%;
+}
+
+.bento-grid .btn {
+    position: absolute;
+    bottom: 10%;
+    padding: 0.75rem 1.5rem;
+    background-color: #8652cf;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    cursor: url('images/cursor-click.png'), default;
+    transition: 0.3s ease;
+}
+
+.bento-grid .btn:hover {
+    background-color: #29005b;
+    color: rgb(255, 255, 255);
+}
+
+.contact-section {
+    padding: 30rem 0 0 0;
+    margin: 30rem 0 10rem 0;
+    top: -200rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h3 {
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    background-image: linear-gradient(rgb(133,133,133),rgb(255,255,255));
+    color: transparent;
+    background-clip: text;
+}
+
+.section-header p {
+    color: lightgray;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.container-3d {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bot-3d {
+    position: relative;
+    top: -10rem;
+    scale: 1.01;
+}
+
+.info-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-top: -6rem;
+    z-index: 999;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-top: -16rem; /* Cache le logo */
+    z-index: 999;
+    padding: 30px;
+}
+
+
+.info-card h3 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    background-image: linear-gradient(rgb(160, 109, 222),rgb(255,255,255));
+    color: transparent;
+    background-clip: text;
+}
+
+.contact-item {
+    margin-bottom: 3rem;
+}
+
+.contact-item p {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #7944e5;
+}
+
+.contact-item a {
+    color: lightgray;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #7944e5;
+    cursor: url('images/cursor-click.png'), default; 
+}
+
+.grid-3 {
+    background-color: #2d2d2d;
+    margin: 1rem;
+    padding: 20px; 
+    border-radius: 18px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start;
+    text-align: center !important;
+    align-self: center !important;  
+}
+
+.grid-3 h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(rgb(160, 109, 222),rgb(255,255,255));
+    color: transparent;
+    background-clip: text;
+    width: 100%; 
+}
+
+.grid-3 p {
+    width: 100%; 
+    margin-top: 0;
+}
+
+footer {
+    display: flex; 
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 4rem;
+    background-color: rgba(155, 124, 233, 0.1);
+}
+
+.box-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.box-icons a {
+    color: lightgray;
+    font-size: 2rem;
+    transition: color 0.5s;
+}
+
+.box-icons a:hover {
+    color: #8356e6;
+    cursor: url('images/cursor-click.png'), default;
+}
+
+@media (max-width: 1400px) {
+
+    /* Ajustements pour l'en-tête */
+    header {
+      padding: 1rem 2rem;
+      /* Réduit le padding */
+    }
+  
+    header h1 {
+      font-size: 2.5rem;
+      /* Réduit la taille du logo */
+    }
+  
+    header nav {
+      gap: 1rem;
+      /* Réduit l'espace entre les liens */
+      margin-left: 0;
+      /* Supprime la marge négative */
+    }
+  
+    .nav-link,
+    .old {
+      font-size: 1rem;
+      /* Réduit la taille des liens */
+      padding: 0.5rem 1rem;
+      /* Réduit le padding des liens */
+    }
+  
+    /* Ajustements pour le contenu principal */
+    main .content {
+      margin-left: 5%;
+      /* Réduit la marge */
+      max-width: 50rem;
+      /* Augmente la largeur maximale */
+    }
+  
+    main .content h1 {
+      font-size: 3rem;
+      /* Réduit la taille du titre */
+    }
+  
+    main .content .description {
+      font-size: 1.1rem;
+      /* Réduit la taille de la description */
+    }
+
+    .robot-3d {
+        top: -44%;
+      scale: 0.5;
+      z-index: -1;
+    }
+  
+    /* Ajustements pour la section "About" */
+    .about-section {
+      margin-top: 15rem;
+      z-index: 999;
+      /* Réduit la marge du haut */
+      margin-bottom: 3rem;
+      /* Réduit la marge du bas */
+    }
+  
+    .about-section .about-title {
+      font-size: 4rem;
+      /* Réduit la taille du titre */
+    }
+  
+    .bento-grid {
+      width: 100%;
+      /* Prend toute la largeur */
+      height: auto;
+      /* Ajuste la hauteur automatiquement */
+      grid-template-columns: 1fr 1fr;
+      /* Deux colonnes */
+      grid-template-areas:
+        "intro tech"
+        "time time"
+        "passion1 passion2";
+      /* Réorganise les éléments */
+      gap: 1rem;
+      /* Réduit l'espacement */
+    }
+  
+    .passion3 {
+      display: none;
+      /* Cache la troisième passion */
+    }
+  
+    /* Ajustements pour la section "Contact" */
+    .contact-section {
+      padding: 20rem 0 0 0;
+      /* Réduit le padding du haut */
+      margin: 20rem 0 5rem 0;
+      /* Réduit les marges */
+    }
+  
+    .contact-section .section-header h3 {
+      font-size: 4rem;
+      /* Réduit la taille du titre */
+    }
+  
+    footer {
+      padding: 1rem 2rem;
+      /* Réduit le padding */
+    }
+  
+    footer .box-icons {
+      gap: 1rem;
+      /* Réduit l'espace entre les icônes */
+    }
+  
+    footer .box-icons a {
+      font-size: 1.5rem;
+      /* Réduit la taille des icônes */
+    }
+  }
+  
+  /* Styles pour les téléphones (max-width: 768px) */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      /* Empile les éléments */
+      align-items: flex-start;
+      /* Aligne à gauche */
+    }
+  
+    header h1 {
+      font-size: 2rem;
+      /* Réduit encore la taille du logo */
+      margin-bottom: 1rem;
+      /* Ajoute une marge en bas */
+    }
+  
+    header nav {
+      flex-direction: column;
+      /* Empile les liens */
+      align-items: flex-start;
+      /* Aligne à gauche */
+      gap: 0.5rem;
+      /* Réduit l'espace entre les liens */
+    }
+  
+    .nav-link,
+    .old {
+      font-size: 1rem;
+      /* Réduit la taille des liens */
+      padding: 0.5rem 1rem;
+      /* Réduit le padding des liens */
+      border-radius: 30px;
+      /* Réduit le rayon de bordure */
+    }
+  
+    main .content {
+      margin-left: 2%;
+      /* Réduit encore la marge */
+      max-width: 90%;
+      /* Prend presque toute la largeur */
+    }
+  
+    main .content h1 {
+      font-size: 2.5rem;
+      /* Réduit encore la taille du titre */
+    }
+  
+    main .content .description {
+      font-size: 1rem;
+      /* Réduit encore la taille de la description */
+    }
+  
+    main .buttons {
+      flex-direction: column;
+      /* Empile les boutons */
+      align-items: flex-start;
+      /* Aligne à gauche */
+    }
+  
+    main .buttons .btn-get-started {
+      width: 100%;
+      /* Prend toute la largeur */
+    }
+  
+    .robot-3d {
+      top: -47.5%;
+      scale: 0.5;
+      z-index: -1;
+      /* Cache le robot */
+    }
+  
+    .about-section {
+      margin-top: 10rem;
+      /* Réduit encore la marge du haut */
+      margin-bottom: 2rem;
+      z-index: 1;
+      /* Réduit encore la marge du bas */
+    }
+  
+    .about-section .about-title {
+      font-size: 3rem;
+      /* Réduit encore la taille du titre */
+    }
+  
+    .bento-grid {
+      grid-template-columns: 1fr;
+      /* Une seule colonne */
+      grid-template-areas:
+        "intro"
+        "tech"
+        "time"
+        "passion1"
+        "passion2";
+      /* Empile les éléments */
+      gap: 1rem;
+      /* Réduit l'espacement */
+    }
+  
+    .passion1,
+    .passion2 {
+      text-align: left;
+      /* Aligne le texte à gauche */
+    }
+  
+    .passion1 h3,
+    .passion2 h3 {
+      font-size: 2rem;
+      /* Réduit la taille des titres */
+    }
+  
+    .contact-section {
+      padding: 15rem 0 0 0;
+      /* Réduit encore le padding du haut */
+      margin: 15rem 0 3rem 0;
+      /* Réduit encore les marges */
+    }
+  
+    .contact-section .section-header h3 {
+      font-size: 3rem;
+      /* Réduit encore la taille du titre */
+    }
+  
+    .contact-grid {
+      gap: 20px;
+      /* Réduit l'espacement */
+    }
+  
+    .contact-grid .info-card {
+      margin-top: 2rem;
+      /* Augmente la marge du haut */
+    }
+  
+    .contact-grid .grid-3 h3 {
+      font-size: 1.5rem;
+      /* Réduit la taille des titres */
+    }
+  
+    footer {
+      position: relative;
+      /* Le positionne normalement dans le flux */
+      margin-top: 5rem;
+      /* Ajoute une marge au-dessus pour l'aérer */
+      padding: 2rem;
+      /* Ajoute du padding pour l'aérer */
+        flex-direction: column;
+          /* Empile les éléments */
+          align-items: flex-start;
+          /* Aligne à gauche */
+          padding: 1rem;
+          /* Réduit le padding */
+      }
+  
+      .box-icons {
+          gap: 1rem;
+          /* Réduit l'espace entre les icônes */
+          margin-top: 1rem;
+          /* Ajoute une marge en haut */
+      }
+  
+      .box-icons a {
+          font-size: 1.5rem;
+          /* Réduit la taille des icônes */
+      }
+  
+      /* Affiche et repositionne le robot */
+      .contact-section .container-3d .bot-3d {
+          display: block;
+          /* Affiche le robot */
+          scale: 0.6;
+          /* Réduit la taille du robot */
+          top: 5rem;
+          /* Le remonte un peu */
+          left: 20%;
+          /* Positionne le robot à gauche */
+      }
+
+      /* Ajuste la taille et la position du conteneur du robot */
+    .contact-section .container-3d {
+        width: 100%;
+        /* Prend toute la largeur */
+        height: 40rem;
+        /* Augmente la hauteur */
+        overflow: visible;
+        /* Affiche le contenu qui dépasse */
+        position: relative;
+        /* Assure le positionnement correct */
+    }
+
+    /* Ajuste la position et la taille du robot */
+    .contact-section .container-3d .bot-3d {
+        position: absolute;
+        /* Positionnement précis */
+        scale: 0.7; /* Réduit légèrement la taille du robot */
+        top: -2rem;
+        /* Le remonte pour le centrer verticalement */
+        left: 0%;
+        /* Centre horizontalement */
+        transform: translateX(-50%);
+        /* Ajuste le centrage horizontal */
+    }
+    footer {
+      margin-top: 2rem;
+        /* Ajoute une marge au-dessus pour l'aérer */
+    }
+
+    /* Ajustement de la marge du haut pour aérer la section de contact */
+    .contact-grid .info-card {
+        margin-top: 2rem;
+        /* Augmente la marge du haut */
+    }
+    }
