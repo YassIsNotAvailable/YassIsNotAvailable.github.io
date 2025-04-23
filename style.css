@@ -618,8 +618,8 @@ footer {
       /* Réduit la taille de la description */
     }
 
-    .robot-3d {
-        display: none;
+    .robot-3d, .info-3d {
+      display: none;
     }
   
     /* Ajustements pour la section "About" */
