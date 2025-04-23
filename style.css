@@ -619,9 +619,7 @@ footer {
     }
 
     .robot-3d {
-        top: -44%;
-      scale: 0.5;
-      z-index: -1;
+        display: none;
     }
   
     /* Ajustements pour la section "About" */
