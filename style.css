@@ -291,6 +291,7 @@ main {
     position: relative;
     overflow: hidden;
     box-shadow: 0 10px 30px black;
+    cursor: none;
 }
 
 .intro { grid-area: intro; min-height: 460px; }
