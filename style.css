@@ -14,8 +14,17 @@ body {
     color: #e7e7e7;
     min-height: 100vh;
     line-height: 1.5;
-    cursor: url('images/cursor.png'), default;
+    cursor: none;
     position: relative;
+}
+
+.circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #5b12c9;
+  box-shadow: 0 0 30px 1px #320378;
 }
 
 .image-gradient {
@@ -378,12 +387,19 @@ main {
     position: absolute;
     scale: 0.7;
     top: -30%;
-    left: 25%;
+    left: 30%;
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 1850px) {
+    .model-box {
+        scale: 0.7;
+        left: 10%;
+    }
 }
 
 .info-3d {
@@ -471,7 +487,8 @@ main {
     transition: transform 0.3s ease;
     text-align: center;
     margin-top: -6rem;
-    z-index: 999;
+    z-index: -1;
+    cursor: url('images/cursor.png'), default;
 }
 
 .info-card:hover {
@@ -626,7 +643,7 @@ footer {
     .info-3d {
       display: none;
     }
-  
+
     /* Ajustements pour la section "About" */
     .about-section {
       margin-top: 15rem;
